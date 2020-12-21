@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>2nd project</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    function Title(props){
+        return(
+            <div>
+                <h1>{props.title}</h1>
+            <p>Edited{props.count}</p>
+
+            </div>
+            
+        )
+      
+    }
+
+    class HotNews extends React.Component{
+
+      constructor(props){
+        super(props);
+        this.state={
+          totalEditCount : 0
+         };
+    }
+     edit(){
+        alert("edit button clicked")
+        this.setState({
+          totalEditCount:this.state.totalEditCount+1
+        });
+      }
+      delete(){
+        alert("delete button clicked")
+        
+      }
+      render(){
+        var props=this.props;
+        const totalEditCount=this.state.totalEditCount;
+      
+        return(
+          <div className="containerNews">
+          <Title title={props.title} count={totalEditCount}/>
+           
+            <p>{props.children}</p>
+
+            <div className="action">
+            <button className="edit" onClick={() =>this.edit ()}>Edit</button>
+            <button className="delete" onClick={() =>this.delete ()}>Delete</button>
+            </div>
+            {!!totalEditCount &&  (<p>total edit clicked{totalEditCount} </p>)}
+           
+            </div>
+         
+        )
+      }
+    }
+
+      ReactDOM.render(
+        <div className="container">
+          <h1>Hello, world!</h1>
+        
+        <HotNews title="News1">mustafiz is playing today</HotNews>
+        <HotNews title="News2">barselona is the best</HotNews>
+         
+        </div>,
+        document.getElementById('root')
+      );
+
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,38 @@
+.container{
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid green ;
+    background-color: cyan;e
+    position: relative;;
+   
+
+}
+.containerNews{
+    border: 1px inset;
+    padding: 10px;
+    font-size: 20px;
+    color: red;
+}
+.containerNews img{
+    margin: 10px;
+}
+.container span{
+    text-align: center;
+}
+
+.edit{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: darkgreen;
+}
+.delete{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: red;
+    margin: 10px;
+}

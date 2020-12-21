@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>1st project</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" >
+
+  class HotNews1 extends React.Component{
+      edit(){
+          alert("edit button clicked")
+      }
+      delete(){
+        alert("delete button clicked")
+      }
+      render(){
+          var props=this.props;
+          return(
+              <div className="conteinerNews">
+                 <img src="https://paloimages.prothom-alo.com/contents/cache/images/120x66x1/uploads/media/2020/07/09/2b81aef669961298974ea97b2c843433-5f074f9d1aceb.jpg?jadewits_media_id=1545638" />
+                 
+                  <span>{props.children}</span>
+                  <div class="action">
+                    <button class="edit" onClick={this.edit}>Edit</button>
+                    <button class="delete" onClick={this.delete}>Delete</button>
+                  </div>
+              </div>
+          )
+      }
+  }
+  class HotNews2 extends React.Component{
+    edit(){
+          alert("edit button clicked")
+      }
+      delete(){
+        alert("delete button clicked")
+      }
+      render(){
+          var props=this.props;
+          return(
+              <div className="conteinerNews">
+                 <img src="//images.prothomalo.com/prothomalo-bangla%2F2020-08%2F57154529-1d8a-4f6e-b7d7-507d002501ee%2Fmanikgonj.png?rect=94%2C0%2C1013%2C675&w=500&auto=format%2Ccompress&fmt=webp" />
+
+                 
+                 
+                  <span>{props.children}</span>
+                  <div class="action">
+                    <button class="edit" onClick={this.edit}>Edit</button>
+                    <button class="delete" onClick={this.delete}>Delete</button>
+                  </div>
+              </div>
+              
+           )
+        }
+    }
+
+    ReactDOM.render(
+        
+        <div className="container">
+            <h1 >HotNews</h1>
+             <HotNews1>রিমান্ড শেষের আগেই সাহেদকে আদালতে হাজির, বিচারকের ভর্ৎসনা</HotNews1>
+             <HotNews2>শ্রিংলার সফর টিকা কূটনীতির চেয়েও বেশি</HotNews2>
+            
+       </div>,
+        document.getElementById('root')
+    )
+
+    </script >
+    
+</body>
+</html>

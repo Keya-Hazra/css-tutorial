@@ -1,0 +1,49 @@
+
+.container{
+    widows: 820px;
+    height: auto;
+    border: 1px solid #000;
+    margin: 0 auto;
+    background-color: cyan;
+    position: relative;
+ 
+}
+.container h1{
+    text-align: center;
+    color:red;
+    text-decoration: underline #000;
+}
+
+
+.conteinerNews{
+   
+    font-size: 20px;
+    color: red;
+    border-radius: 5px;
+    border: 1px inset;
+}
+.conteinerNews img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+span{
+    margin: 10px;
+}
+.action{
+    padding: 20px;
+    font-size: 10px;
+    
+}
+.edit{
+    background-color: green;
+    color: ivory;
+    padding: 10px;
+    margin: 10px;
+}
+.delete{
+    background-color: red;
+    color:black;
+    padding: 10px;
+}
